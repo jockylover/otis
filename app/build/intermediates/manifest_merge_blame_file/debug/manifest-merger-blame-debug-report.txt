@@ -1,0 +1,121 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.myapplication"
+4    android:versionCode="1"
+5    android:versionName="1.0" > <!-- 腾讯地图 SDK 要求的权限(结束) -->
+6    <uses-sdk
+7        android:minSdkVersion="24"
+8        android:targetSdkVersion="33" />
+9    <!-- 腾讯地图 SDK 要求的权限(开始) -->
+10    <!-- 访问网络获取地图服务 -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:34:5-66
+11-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:34:22-64
+12    <!-- 检查网络可用性 -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:36:5-78
+13-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:36:22-76
+14    <!-- 访问WiFi状态 -->
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:38:5-76
+15-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:38:22-73
+16    <!-- 需要外部存储写权限用于保存地图缓存 -->
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:40:5-80
+17-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:40:22-78
+18    <!-- 获取 device id 辨别设备 -->
+19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+19-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:42:5-74
+19-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:42:22-72
+20
+21    <permission
+21-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+22        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-31:19
+28        android:allowBackup="true"
+28-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:6:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:7:9-65
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:fullBackupContent="@xml/backup_rules"
+33-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:8:9-54
+34        android:icon="@mipmap/ic_launcher"
+34-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:9:9-43
+35        android:label="@string/app_name"
+35-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:11:9-41
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:12:9-54
+37        android:supportsRtl="true"
+37-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:13:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.MyApplication"
+39-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:14:9-51
+40        android:usesCleartextTraffic="true" >
+40-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:10:9-44
+41        <activity
+41-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:16:9-18:40
+42            android:name="com.example.myapplication.AddDataActivity"
+42-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:17:13-44
+43            android:exported="false" />
+43-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:18:13-37
+44        <activity
+44-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:9-27:20
+45            android:name="com.example.myapplication.MainActivity"
+45-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:13-41
+46            android:exported="true" >
+46-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:21:13-36
+47            <intent-filter>
+47-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:13-26:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:23:17-69
+48-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:23:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:17-77
+50-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <meta-data
+54-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:9-30:66
+55            android:name="TencentMapSDK"
+55-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:29:13-41
+56            android:value="ZDMBZ-M2G3B-N6EU4-NFV4R-BVII6-HEFB4" />
+56-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:30:13-64
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.myapplication.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+68        </provider>
+69    </application>
+70
+71</manifest>
