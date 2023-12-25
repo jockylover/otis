@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7926bd093788967f794faa2f94550734\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dell\.gradle\caches\transforms-3\09cf5f4b24f81aa4e552faf713181011\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dell\.gradle\caches\transforms-3\a164c2f26d91e45eed9cd94a8f4e0898\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -58,8 +58,8 @@ MERGED from [com.baidu.lbsyun:base:7.5.9.2] C:\Users\dell\.gradle\caches\transfo
 	xmlns:android
 		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-31:19
-INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-32:19
+INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-32:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7926bd093788967f794faa2f94550734\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7926bd093788967f794faa2f94550734\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dell\.gradle\caches\transforms-3\09cf5f4b24f81aa4e552faf713181011\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -102,54 +102,32 @@ MERGED from [com.baidu.lbsyun:base:7.5.9.2] C:\Users\dell\.gradle\caches\transfo
 		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:7:9-65
 	android:usesCleartextTraffic
 		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:10:9-44
-activity#com.example.myapplication.AddDataActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:16:9-18:40
-	android:exported
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:18:13-37
-	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:17:13-44
 activity#com.example.myapplication.MainActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:exported
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:17:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:27-74
 meta-data#TencentMapSDK
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:9-30:66
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:9-27:66
 	android:value
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:30:13-64
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:27:13-64
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:29:13-41
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:34:5-66
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:26:13-41
+activity#com.example.myapplication.AddTaskActivity
+ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:9-30:20
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:34:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:36:5-78
-	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:36:22-76
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:38:5-76
-	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:38:22-73
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:40:5-80
-	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:40:22-78
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:42:5-74
-	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:42:22-72
+		ADDED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:19-50
 uses-sdk
 INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml

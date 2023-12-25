@@ -1,0 +1,41 @@
+<!-- res/layout/activity_add_task.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Task Name -->
+    <EditText
+        android:id="@+id/editTextTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task Name" />
+
+    <!-- Due Date -->
+    <EditText
+        android:id="@+id/editTextDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTaskName"
+        android:layout_marginTop="16dp"
+        android:hint="Due Date" />
+
+    <!-- Reward Points -->
+    <EditText
+        android:id="@+id/editTextRewardPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDueDate"
+        android:layout_marginTop="16dp"
+        android:hint="Reward Points" />
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRewardPoints"
+        android:layout_marginTop="16dp"
+        android:text="Add Task" />
+
+</RelativeLayout>
