@@ -3,9 +3,6 @@ package com.example.myapplication.data;
 import android.content.Context;
 import android.util.Log;
 
-import com.example.myapplication.MainActivity;
-import com.example.myapplication.ShoppingListFragment;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;

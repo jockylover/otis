@@ -1,9 +1,14 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +18,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TaskAdapter adapter;
+    private static final int ADD_TASK_REQUEST_CODE = 1;
+    private ActivityResultLauncher<Intent> addTaskLauncher;
 
+    public List<Task> taskList;
+    private TaskAdapter adapter;
+    public int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("已完成"));
         tabLayout.addTab(tabLayout.newTab().setText("成就点数"));
 
-        // 设置 RecyclerView
-        List<Task> taskList = generateTaskList();
+
+        // Initialize your taskList
+        taskList = generateTaskList();
+
+        // Set up your RecyclerView with the adapter
         adapter = new TaskAdapter(taskList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -39,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 // 根据选择的 Tab 更新 RecyclerView 的内容
-                int position = tab.getPosition();
+                position = tab.getPosition();
                 updateRecyclerView(position, taskList);
             }
 
@@ -51,8 +63,36 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+        // Initialize the ActivityResultLauncher
+        addTaskLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            Task newTask = (Task) data.getSerializableExtra("newTask");
+                            addTask(newTask);
+                        }
+                    }
+                });
+    }
+    public void startAddTaskActivity() {
+        Intent intent = new Intent(this, AddTaskActivity.class);
+        addTaskLauncher.launch(intent);
     }
 
+    // Handle the result from AddTaskActivity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ADD_TASK_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            // Extract the Task from the result
+            Task newTask = (Task) data.getSerializableExtra("newTask");
+
+            // Add the newTask to your task list
+            addTask(newTask);
+        }
+    }
     private List<Task> generateTaskList() {
         // 在这里生成任务列表数据
         List<Task> taskList = new ArrayList<>();
@@ -103,24 +143,25 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case 0:
-                // 添加任务
-                addTask();
-                return true;
-            case 1:
-                // 删除任务
-                deleteTask();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.menuAddTask) {
+            // 添加任务
+            startAddTaskActivity();
+            return true;
+        } else if (item.getItemId() == R.id.menuDeleteTask) {
+            // 删除任务
+            deleteTask();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
     // 添加任务
-    private void addTask() {
-        // 在这里处理添加任务的逻辑
-        // 例如，弹出对话框让用户输入任务信息，并将任务添加到任务列表中
+    public void addTask(Task task) {
+//        updateRecyclerView(position, taskList);
+//        adapter.updateList(taskList);
+        taskList.add(task);
+        adapter.updateList(filterTasks(taskList, false));
     }
 
     // 删除任务
