@@ -1337,6 +1337,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue_color
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3184,6 +3185,7 @@ id east
 id edge
 id editTextDueDate
 id editTextRewardPoints
+id editTextTask
 id editTextTaskName
 id edit_query
 id elastic
@@ -3361,7 +3363,7 @@ id radio
 id ratio
 id rectangles
 id recycle_view_books
-id recyclerView
+id recyclerViewTasks
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3444,8 +3446,8 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
-id tabLayout
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3459,6 +3461,10 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id task_coin_value_text_view
+id task_creation_time_text_view
+id task_name_text_view
+id tasks_recycler_view
 id text
 id text2
 id textEnd
@@ -3492,9 +3498,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id txtDeadline
-id txtRewardPoints
-id txtTaskName
 id unchecked
 id uniform
 id unlabeled
@@ -3502,6 +3505,7 @@ id up
 id useLogo
 id vertical_only
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -3651,8 +3655,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_inprocess
 layout fragment_map
 layout fragment_shopping_list
+layout fragment_task_management
 layout fragment_web_view
 layout item_task
 layout m3_alert_dialog

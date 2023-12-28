@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color blue_color
 color purple_200
 color purple_500
 color purple_700
@@ -15,24 +16,29 @@ drawable ic_launcher_foreground
 id buttonAddTask
 id editTextDueDate
 id editTextRewardPoints
+id editTextTask
 id editTextTaskName
 id image_view_book_cover
 id mapView
 id menuAddTask
 id menuDeleteTask
 id recycle_view_books
-id recyclerView
-id tabLayout
+id recyclerViewTasks
+id tab_layout
+id task_coin_value_text_view
+id task_creation_time_text_view
+id task_name_text_view
+id tasks_recycler_view
 id text_view_book_title
-id txtDeadline
-id txtRewardPoints
-id txtTaskName
+id view_pager
 id webview
 layout activity_add_task
 layout activity_main
 layout book_item_list
+layout fragment_inprocess
 layout fragment_map
 layout fragment_shopping_list
+layout fragment_task_management
 layout fragment_web_view
 layout item_task
 menu menu_main

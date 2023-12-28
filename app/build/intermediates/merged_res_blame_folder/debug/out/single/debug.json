@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.myapplication.app-merged_res-28:/layout_item_task.xml.flat",
+        "source": "com.example.myapplication.app-main-30:/layout/item_task.xml"
+    },
+    {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -88,12 +92,12 @@
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_fragment_inprocess.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\fragment_inprocess.xml"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-28:/layout_activity_main.xml.flat",
-        "source": "com.example.myapplication.app-main-30:/layout/activity_main.xml"
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\menu_context_menu.xml.flat",
@@ -114,6 +118,10 @@
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_fragment_task_management.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\fragment_task_management.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-hdpi_ic_launcher_round.webp.flat",
