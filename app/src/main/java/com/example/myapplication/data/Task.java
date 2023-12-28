@@ -1,7 +1,8 @@
 package com.example.myapplication.data;
+import java.io.Serializable;
 import java.util.Date;
 
-public class Task {
+public class Task implements Serializable {
     private String name; // 任务名称
     private Date createdAt; // 创建时间
     private int coinValue; // 完成任务后可以获得的任务币点数

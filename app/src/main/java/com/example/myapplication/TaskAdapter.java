@@ -50,7 +50,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     .setMessage("您确定已完成任务 " + task.getName() + " 吗？")
                     .setPositiveButton("确定", (dialog, which) -> {
                         // TODO: 增加成就点数逻辑
-                        // TODO: 从列表中移除任务
                         tasksList.remove(position);
                         notifyItemRemoved(position);
                         // 这里可以调用一个回调接口通知外部活动进行数据更新和持久化

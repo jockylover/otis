@@ -1,9 +1,15 @@
 package com.example.myapplication;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,39 +22,63 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManagementFragment extends Fragment {
-
-    // RecyclerView用于展示任务列表
-    private RecyclerView tasksRecyclerView;
+    private List<Task> tasksList;
     private TaskAdapter taskAdapter;
-    private List<Task> tasksList; // 任务列表数据源
+    private RecyclerView tasksRecyclerView;
+    private ActivityResultLauncher<Intent> addTaskLauncher;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // 初始化静态的任务列表
         tasksList = new ArrayList<>();
-        tasksList.add(new Task("学习Android开发", 10));
-        tasksList.add(new Task("读一章书", 5));
-        tasksList.add(new Task("锻炼30分钟", 8));
-        tasksList.add(new Task("完成英语练习", 6));
+        // 添加一些示例任务
+        initializeSampleTasks();
+        taskAdapter = new TaskAdapter(tasksList);
+
+        // 初始化 ActivityResultLauncher
+        addTaskLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            Task newTask = (Task) data.getSerializableExtra("NEW_TASK");
+                            tasksList.add(newTask);
+                            taskAdapter.notifyDataSetChanged();
+                        }
+                    }
+                }
+        );
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_task_management, container, false);
-
-        // 初始化RecyclerView和Adapter
         tasksRecyclerView = view.findViewById(R.id.tasks_recycler_view);
-        tasksRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        // 假设您已经有一个TaskAdapter类来处理任务列表的显示
-        taskAdapter = new TaskAdapter(tasksList);
+        tasksRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         tasksRecyclerView.setAdapter(taskAdapter);
+
+        // 初始化添加任务按钮等其他UI元素
+        Button addButton = view.findViewById(R.id.add_task_button);
+        addButton.setOnClickListener(v -> launchAddTaskActivity());
 
         return view;
     }
+    // 初始化示例任务的方法
+    private void initializeSampleTasks() {
+        tasksList.add(new Task("完成Android项目", 10));
+        tasksList.add(new Task("阅读技术文章", 5));
+        tasksList.add(new Task("编写代码练习", 8));
+    }
+    // 添加任务Activity启动方法
+    public void launchAddTaskActivity() {
+        Intent intent = new Intent(getActivity(), AddTaskActivity.class);
+        addTaskLauncher.launch(intent);
+    }
+    public void onAddTaskButtonClicked(View view) {
+        launchAddTaskActivity();
+    }
 }
+
 

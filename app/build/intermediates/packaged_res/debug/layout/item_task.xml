@@ -38,6 +38,11 @@
         android:textSize="18sp"
         android:textColor="#FF9800"
         android:text="10 points" />
+    <CheckBox
+        android:id="@+id/task_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"/>
 </LinearLayout>
 
 

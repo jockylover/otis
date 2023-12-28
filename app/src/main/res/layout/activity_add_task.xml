@@ -1,41 +1,27 @@
-<!-- res/layout/activity_add_task.xml -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- Task Name -->
     <EditText
-        android:id="@+id/editTextTaskName"
+        android:id="@+id/task_name_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task Name" />
+        android:hint="任务名称"/>
 
-    <!-- Due Date -->
     <EditText
-        android:id="@+id/editTextDueDate"
+        android:id="@+id/task_point_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextTaskName"
-        android:layout_marginTop="16dp"
-        android:hint="Due Date" />
+        android:hint="任务点数"
+        android:inputType="number"/>
 
-    <!-- Reward Points -->
-    <EditText
-        android:id="@+id/editTextRewardPoints"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextDueDate"
-        android:layout_marginTop="16dp"
-        android:hint="Reward Points" />
-
-    <!-- Add Button -->
     <Button
-        android:id="@+id/buttonAddTask"
-        android:layout_width="wrap_content"
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextRewardPoints"
-        android:layout_marginTop="16dp"
-        android:text="Add Task" />
+        android:text="确认添加"/>
+</LinearLayout>
 
-</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.myapplication.data;
+import java.io.Serializable;
 import java.util.Date;
-public class Reward {
+public class Reward implements Serializable {
     private String name; // 奖励名称
     private Date createdAt; // 创建时间
     private int coinCost; // 兑换奖励需要消耗的任务币点数

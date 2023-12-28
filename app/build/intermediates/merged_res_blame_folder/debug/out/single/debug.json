@@ -1,15 +1,15 @@
 [
     {
-        "merged": "com.example.myapplication.app-merged_res-28:/layout_item_task.xml.flat",
-        "source": "com.example.myapplication.app-main-30:/layout/item_task.xml"
-    },
-    {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_item_reward.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\item_reward.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -76,12 +76,20 @@
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_activity_add_reward.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\activity_add_reward.xml"
+    },
+    {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_fragment_reward_management.xml.flat",
+        "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\fragment_reward_management.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\drawable_book_2.jpg.flat",
@@ -120,8 +128,16 @@
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\activity_main.xml"
     },
     {
+        "merged": "com.example.myapplication.app-merged_res-28:/layout_activity_add_reward.xml.flat",
+        "source": "com.example.myapplication.app-main-30:/layout/activity_add_reward.xml"
+    },
+    {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_fragment_task_management.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\fragment_task_management.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-merged_res-28:/layout_fragment_reward_management.xml.flat",
+        "source": "com.example.myapplication.app-main-30:/layout/fragment_reward_management.xml"
     },
     {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\mipmap-hdpi_ic_launcher_round.webp.flat",

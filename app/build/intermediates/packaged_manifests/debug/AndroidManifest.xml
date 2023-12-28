@@ -46,6 +46,8 @@
 
             <!-- Add any necessary intent filters here -->
         </activity>
+        <activity android:name="com.example.myapplication.AddRewardActivity" >
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
