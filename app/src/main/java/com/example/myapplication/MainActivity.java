@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Task> tasksList = new ArrayList<>();
     private TaskAdapter taskAdapter;
     private RecyclerView tasksRecyclerView;
+    private AchievementPointsManager pointsManager;
+    private SharedViewModel sharedViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_layout);
+        pointsManager = new AchievementPointsManager();
+        // Initialize the shared ViewModel
+        sharedViewModel = new ViewModelProvider(this).get(SharedViewModel.class);
 
         fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(), getLifecycle());
         viewPager.setAdapter(fragmentAdapter);
@@ -66,9 +72,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    return new TaskManagementFragment(); // 任务管理页面
+                    TaskManagementFragment taskFragment = new TaskManagementFragment();
+                    taskFragment.setSharedViewModel(sharedViewModel);
+                    return taskFragment;
                 case 1:
-                    return new RewardManagementFragment(); // 奖励管理页面
+                    RewardManagementFragment rewardFragment = new RewardManagementFragment();
+                    rewardFragment.setSharedViewModel(sharedViewModel);
+                    return rewardFragment;
                 case 2:
                     return new BillingFragment(); // 账单页面
                 default:

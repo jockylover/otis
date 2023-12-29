@@ -7,12 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,11 +24,13 @@ import com.example.myapplication.data.Task;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskManagementFragment extends Fragment {
+public class TaskManagementFragment extends Fragment implements Task.TaskCompletionListener{
     private List<Task> tasksList;
     private TaskAdapter taskAdapter;
     private RecyclerView tasksRecyclerView;
     private ActivityResultLauncher<Intent> addTaskLauncher;
+    private TextView pointsTextView;
+    private SharedViewModel sharedViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +38,7 @@ public class TaskManagementFragment extends Fragment {
         tasksList = new ArrayList<>();
         // 添加一些示例任务
         initializeSampleTasks();
-        taskAdapter = new TaskAdapter(tasksList);
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // 初始化 ActivityResultLauncher
         addTaskLauncher = registerForActivityResult(
@@ -50,21 +55,44 @@ public class TaskManagementFragment extends Fragment {
                 }
         );
     }
-
+//    public void setPointsManager(AchievementPointsManager pointsManager) {
+//        this.pointsManager = pointsManager;
+//    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_task_management, container, false);
         tasksRecyclerView = view.findViewById(R.id.tasks_recycler_view);
         tasksRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        taskAdapter = new TaskAdapter(tasksList, sharedViewModel, this);
         tasksRecyclerView.setAdapter(taskAdapter);
 
-        // 初始化添加任务按钮等其他UI元素
         Button addButton = view.findViewById(R.id.add_task_button);
         addButton.setOnClickListener(v -> launchAddTaskActivity());
 
+        pointsTextView = view.findViewById(R.id.pointsTextView);
+        updatePointsTextView(); // 更新TextView显示的点数
+
         return view;
     }
+    public void setSharedViewModel(SharedViewModel sharedViewModel) {
+        this.sharedViewModel = sharedViewModel;
+    }
+    public void onTaskCompleted(Task task) {
+        if (sharedViewModel != null) {
+            Toast.makeText(getContext(), "任务完成！获得了 " + task.getCoinValue() + " 点成就点", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void updatePointsTextView() {
+        if (sharedViewModel != null) {
+            sharedViewModel.getPoints().observe(getViewLifecycleOwner(), points -> {
+                pointsTextView.setText("成就点数: " + points);
+            });
+        }
+    }
+
     // 初始化示例任务的方法
     private void initializeSampleTasks() {
         tasksList.add(new Task("完成Android项目", 10));

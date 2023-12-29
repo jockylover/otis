@@ -20,6 +20,8 @@ id image_view_book_cover
 id mapView
 id menuAddTask
 id menuDeleteTask
+id pointsTextView
+id points_text_view
 id recycle_view_books
 id reward_checkbox
 id reward_coin_cost_text_view

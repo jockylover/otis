@@ -128,10 +128,6 @@
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-28:/layout_activity_add_reward.xml.flat",
-        "source": "com.example.myapplication.app-main-30:/layout/activity_add_reward.xml"
-    },
-    {
         "merged": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-merged_res-28:\\layout_fragment_task_management.xml.flat",
         "source": "C:\\Users\\dell\\.gradle\\daemon\\8.1.1\\com.example.myapplication.app-main-30:\\layout\\fragment_task_management.xml"
     },

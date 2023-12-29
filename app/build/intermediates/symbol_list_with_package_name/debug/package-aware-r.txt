@@ -3351,6 +3351,8 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pointsTextView
+id points_text_view
 id position
 id postLayout
 id pressed

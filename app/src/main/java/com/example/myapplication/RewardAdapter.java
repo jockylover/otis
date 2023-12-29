@@ -4,6 +4,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,9 +17,11 @@ import java.util.List;
 
 public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardViewHolder> {
     private List<Reward> rewardsList;
+    private SharedViewModel sharedViewModel;
 
-    public RewardAdapter(List<Reward> rewardsList) {
+    public RewardAdapter(List<Reward> rewardsList, SharedViewModel sharedViewModel) {
         this.rewardsList = rewardsList;
+        this.sharedViewModel = sharedViewModel;
     }
 
     @NonNull
@@ -42,11 +46,18 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
                     .setTitle("确认兑换")
                     .setMessage("您确定要兑换奖励 " + reward.getName() + " 吗？")
                     .setPositiveButton("确定", (dialog, which) -> {
-                        // TODO: 减少成就点数逻辑
-                        // TODO: 从列表中移除奖励
-                        rewardsList.remove(position);
-                        notifyItemRemoved(position);
-                        // 这里可以调用一个回调接口通知外部活动进行数据更新和持久化
+                        if (sharedViewModel.getPoints().getValue() >= reward.getCoinCost()) {
+                            sharedViewModel.subtractPoints(reward.getCoinCost());
+                            if (position < rewardsList.size()) {
+                                rewardsList.remove(position);
+                                notifyItemRemoved(position);
+                            }
+                        }else {
+                            Toast.makeText(holder.itemView.getContext(), "点数不足，无法兑换此奖励", Toast.LENGTH_SHORT).show();
+                        }
+//                        rewardsList.remove(position);
+//                        notifyItemRemoved(position);
+//                        // 这里可以调用一个回调接口通知外部活动进行数据更新和持久化
                     })
                     .setNegativeButton("取消", null)
                     .show();

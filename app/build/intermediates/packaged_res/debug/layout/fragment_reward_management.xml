@@ -5,12 +5,24 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- 添加显示当前成就点数的TextView -->
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rewards_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
+    <TextView
+        android:id="@+id/points_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/design_default_color_primary"
+        android:text="成就点数: 0"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
     <Button
         android:id="@+id/add_reward_button"
         android:layout_width="match_parent"
@@ -18,3 +30,4 @@
         android:text="添加奖励"/>
 
 </LinearLayout>
+

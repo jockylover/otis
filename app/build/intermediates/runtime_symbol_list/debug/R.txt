@@ -3350,6 +3350,8 @@ int id pathRelative 0x7f080150
 int id peekHeight 0x7f080151
 int id percent 0x7f080152
 int id pin 0x7f080153
+int id pointsTextView 0x7f08021c
+int id points_text_view 0x7f08021d
 int id position 0x7f080154
 int id postLayout 0x7f080155
 int id pressed 0x7f080156

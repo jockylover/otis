@@ -21,8 +21,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     private List<Task> tasksList;
     private Task.TaskCompletionListener taskCompletionListener;
     private Context context;
-    public TaskAdapter(List<Task> tasksList) {
+    private SharedViewModel sharedViewModel;
+
+    public TaskAdapter(List<Task> tasksList, SharedViewModel sharedViewModel, Task.TaskCompletionListener taskCompletionListener) {
         this.tasksList = tasksList;
+        this.sharedViewModel = sharedViewModel;
+        this.taskCompletionListener = taskCompletionListener;
     }
 
     @NonNull
@@ -37,7 +41,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         Task task = tasksList.get(position);
         holder.taskNameTextView.setText(task.getName());
         holder.taskCreationTimeTextView.setText(DateFormat.getDateTimeInstance().format(task.getCreatedAt())); // 使用合适的格式化
-        holder.taskCoinValueTextView.setText(task.getCoinValue() + " points");
+        holder.taskCoinValueTextView.setText(task.getCoinValue() + " coins");
         // 设置点数文本颜色
         holder.taskCoinValueTextView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.blue_color));
         // 设置CheckBox点击事件
@@ -49,16 +53,18 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     .setTitle("确认完成")
                     .setMessage("您确定已完成任务 " + task.getName() + " 吗？")
                     .setPositiveButton("确定", (dialog, which) -> {
-                        // TODO: 增加成就点数逻辑
+                        sharedViewModel.addPoints(task.getCoinValue());
                         tasksList.remove(position);
                         notifyItemRemoved(position);
-                        // 这里可以调用一个回调接口通知外部活动进行数据更新和持久化
+                        // 一个回调接口通知外部活动进行数据更新和持久化
+                        if (taskCompletionListener != null) {
+                            taskCompletionListener.onTaskCompleted(task);
+                        }
                     })
                     .setNegativeButton("取消", null)
                     .show();
         });
     }
-
     @Override
     public int getItemCount() {
         return tasksList.size();

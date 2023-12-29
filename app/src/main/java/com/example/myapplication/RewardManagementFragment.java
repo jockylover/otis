@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -26,7 +27,13 @@ public class RewardManagementFragment extends Fragment {
     private RewardAdapter rewardAdapter;
     private List<Reward> rewardsList;
     private ActivityResultLauncher<Intent> addRewardLauncher;
+    private AchievementPointsManager pointsManager;
+    private TextView pointsTextView;
+    private SharedViewModel sharedViewModel;
 
+    public void setSharedViewModel(SharedViewModel sharedViewModel) {
+        this.sharedViewModel = sharedViewModel;
+    }
     @Nullable
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,15 +73,29 @@ public class RewardManagementFragment extends Fragment {
         rewardsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         Button addRewardButton = view.findViewById(R.id.add_reward_button);
         addRewardButton.setOnClickListener(v -> launchAddRewardActivity());
-
-        rewardAdapter = new RewardAdapter(rewardsList);
+        // 初始化成就点数TextView
+        pointsTextView = view.findViewById(R.id.points_text_view);
+        updatePointsTextView(); // 更新TextView显示的点数
+        sharedViewModel.getPoints().observe(getViewLifecycleOwner(), points -> {
+            pointsTextView.setText("成就点数: " + points);
+        });
+        rewardAdapter = new RewardAdapter(rewardsList, sharedViewModel);
         rewardsRecyclerView.setAdapter(rewardAdapter);
-
         return view;
     }
     public void launchAddRewardActivity() {
         Intent intent = new Intent(getActivity(), AddRewardActivity.class);
         addRewardLauncher.launch(intent);
+    }
+    private void updatePointsTextView() {
+        // 更新成就点数的显示
+        if (pointsManager != null) {
+            int currentPoints = pointsManager.getPoints();
+            pointsTextView.setText("成就点数: " + currentPoints);
+        }
+    }
+    public void setPointsManager(AchievementPointsManager pointsManager) {
+        this.pointsManager = pointsManager;
     }
 }
 
