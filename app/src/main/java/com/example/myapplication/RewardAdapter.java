@@ -49,16 +49,14 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
                         if (sharedViewModel.getPoints().getValue() >= reward.getCoinCost()) {
                             sharedViewModel.subtractPoints(reward.getCoinCost());
                             sharedViewModel.addBillingRecord("兑换奖励: " + reward.getName(), -reward.getCoinCost());
-                            if (position < rewardsList.size()) {
-                                rewardsList.remove(position);
-                                notifyItemRemoved(position);
-                            }
                         }else {
                             Toast.makeText(holder.itemView.getContext(), "点数不足，无法兑换此奖励", Toast.LENGTH_SHORT).show();
                         }
-//                        rewardsList.remove(position);
-//                        notifyItemRemoved(position);
-//                        // 这里可以调用一个回调接口通知外部活动进行数据更新和持久化
+                        int adapterPosition = holder.getAdapterPosition();
+                        if (adapterPosition != RecyclerView.NO_POSITION) {
+                            rewardsList.remove(adapterPosition);
+                            notifyItemRemoved(adapterPosition);
+                        }
                     })
                     .setNegativeButton("取消", null)
                     .show();

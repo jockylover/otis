@@ -18,7 +18,7 @@ import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder> {
 
-    private List<Task> tasksList;
+    public List<Task> tasksList;
     private Task.TaskCompletionListener taskCompletionListener;
     private Context context;
     private SharedViewModel sharedViewModel;
@@ -55,8 +55,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     .setPositiveButton("确定", (dialog, which) -> {
                         sharedViewModel.addPoints(task.getCoinValue());
                         sharedViewModel.addBillingRecord("完成任务: " + task.getName(), task.getCoinValue());
-                        tasksList.remove(position);
-                        notifyItemRemoved(position);
+                        int adapterPosition = holder.getAdapterPosition();
+                        if (adapterPosition != RecyclerView.NO_POSITION) {
+                            tasksList.remove(adapterPosition);
+                            notifyItemRemoved(adapterPosition);
+                        }
+
+
                         // 一个回调接口通知外部活动进行数据更新和持久化
                         if (taskCompletionListener != null) {
                             taskCompletionListener.onTaskCompleted(task);
