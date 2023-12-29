@@ -54,6 +54,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     .setMessage("您确定已完成任务 " + task.getName() + " 吗？")
                     .setPositiveButton("确定", (dialog, which) -> {
                         sharedViewModel.addPoints(task.getCoinValue());
+                        sharedViewModel.addBillingRecord("完成任务: " + task.getName(), task.getCoinValue());
                         tasksList.remove(position);
                         notifyItemRemoved(position);
                         // 一个回调接口通知外部活动进行数据更新和持久化

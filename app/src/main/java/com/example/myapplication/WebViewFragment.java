@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.example.myapplication.data.Book;
 
 /**
  * A simple {@link Fragment} subclass.

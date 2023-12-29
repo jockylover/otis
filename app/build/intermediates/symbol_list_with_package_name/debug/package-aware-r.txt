@@ -3105,6 +3105,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id billing_recycler_view
 id blocking
 id bottom
 id bounce
@@ -3147,6 +3148,7 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id current_points_view
 id custom
 id customPanel
 id cut
@@ -3157,6 +3159,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id description_text_view
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3187,6 +3190,7 @@ id edge
 id edit_query
 id elastic
 id embed
+id empty_view
 id end
 id endToStart
 id enterAlways
@@ -3352,6 +3356,7 @@ id peekHeight
 id percent
 id pin
 id pointsTextView
+id points_change_text_view
 id points_text_view
 id position
 id postLayout
@@ -3491,6 +3496,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timestamp_text_view
 id title
 id titleDividerNoCustom
 id title_template
@@ -3664,11 +3670,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_billing
 layout fragment_map
 layout fragment_reward_management
 layout fragment_shopping_list
 layout fragment_task_management
 layout fragment_web_view
+layout item_billing_record
 layout item_reward
 layout item_task
 layout m3_alert_dialog

@@ -48,6 +48,7 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
                     .setPositiveButton("确定", (dialog, which) -> {
                         if (sharedViewModel.getPoints().getValue() >= reward.getCoinCost()) {
                             sharedViewModel.subtractPoints(reward.getCoinCost());
+                            sharedViewModel.addBillingRecord("兑换奖励: " + reward.getName(), -reward.getCoinCost());
                             if (position < rewardsList.size()) {
                                 rewardsList.remove(position);
                                 notifyItemRemoved(position);
