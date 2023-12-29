@@ -20,7 +20,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\dell\.gradle\caches\transforms-3\7583b06c8d565df0b3279f02960ad21b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-33:19
+17-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:5:5-31:19
 18        android:allowBackup="true"
 18-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -33,74 +33,72 @@
 23-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:8:9-54
 24        android:icon="@mipmap/ic_launcher"
 24-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:11:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:12:9-54
-27        android:supportsRtl="true"
-27-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:13:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.MyApplication"
-29-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:14:9-51
-30        android:usesCleartextTraffic="true" >
-30-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:10:9-44
-31        <activity
-31-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:16:9-24:20
-32            android:name="com.example.myapplication.MainActivity"
-32-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:17:13-41
-33            android:exported="true" >
-33-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:18:13-36
-34            <intent-filter>
-34-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:13-23:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:17-69
-35-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:17-77
-37-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:22:27-74
-38            </intent-filter>
-39        </activity>
-40
-41        <meta-data
-41-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:9-27:66
-42            android:name="TencentMapSDK"
-42-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:26:13-41
-43            android:value="ZDMBZ-M2G3B-N6EU4-NFV4R-BVII6-HEFB4" />
-43-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:27:13-64
-44
-45        <activity android:name="com.example.myapplication.AddTaskActivity" >
-45-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:9-30:20
-45-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:28:19-50
-46
-47            <!-- Add any necessary intent filters here -->
-48        </activity>
-49        <activity android:name="com.example.myapplication.AddRewardActivity" >
-49-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:31:9-68
-49-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:31:19-52
-50        </activity>
-51
-52        <provider
-52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-54            android:authorities="com.example.myapplication.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-56            <meta-data
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-62        </provider>
-63    </application>
-64
-65</manifest>
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:11:9-54
+26        android:supportsRtl="true"
+26-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:12:9-35
+27        android:testOnly="true"
+28        android:theme="@style/Theme.胡清晨"
+28-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:13:9-41
+29        android:usesCleartextTraffic="true" >
+29-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:10:9-44
+30        <activity
+30-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:15:9-22:20
+31            android:name="com.example.myapplication.MainActivity"
+31-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:16:13-41
+32            android:exported="true" >
+32-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:17:13-36
+33            <intent-filter>
+33-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:18:13-21:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:17-69
+34-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:19:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:17-77
+36-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:20:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <meta-data
+40-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:23:9-25:66
+41            android:name="TencentMapSDK"
+41-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:24:13-41
+42            android:value="ZDMBZ-M2G3B-N6EU4-NFV4R-BVII6-HEFB4" />
+42-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:25:13-64
+43
+44        <activity android:name="com.example.myapplication.AddTaskActivity" >
+44-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:26:9-28:20
+44-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:26:19-50
+45
+46            <!-- Add any necessary intent filters here -->
+47        </activity>
+48        <activity android:name="com.example.myapplication.AddRewardActivity" >
+48-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:29:9-68
+48-->C:\Users\dell\AndroidStudioProjects\otis\my-map\app\src\main\AndroidManifest.xml:29:19-52
+49        </activity>
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+53            android:authorities="com.example.myapplication.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dell\.gradle\caches\transforms-3\722ce4ae04d785bbe35f6fd3d57d0589\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dell\.gradle\caches\transforms-3\1fd2cb27a975d210c44350b90d8c6050\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+61        </provider>
+62    </application>
+63
+64</manifest>

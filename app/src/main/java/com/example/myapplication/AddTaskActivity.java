@@ -43,10 +43,9 @@ public class AddTaskActivity extends AppCompatActivity {
                 // 创建任务对象并设置结果
             Task newTask = new Task(taskName, taskPoints);
             Intent resultIntent = new Intent();
-            resultIntent.putExtra("NEW_TASK", newTask); // 'newTask' 需要实现 Serializable
+            resultIntent.putExtra("NEW_TASK", newTask);
             setResult(RESULT_OK, resultIntent);
 
-            // 注意处理输入验证和错误处理
 
             finish(); // 关闭Activity
         });

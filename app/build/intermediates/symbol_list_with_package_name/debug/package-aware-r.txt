@@ -1350,6 +1350,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2803,6 +2806,7 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen nav_header_height
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -2924,6 +2928,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back_black_24
+drawable ic_avatar_placeholder
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2936,7 +2941,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_rewards
 drawable ic_search_black_24
+drawable ic_tasks
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2995,6 +3002,7 @@ drawable mtrl_switch_thumb_unchecked_pressed
 drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
+drawable nav_header_background
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -3108,6 +3116,7 @@ id bestChoice
 id billing_recycler_view
 id blocking
 id bottom
+id bottomNavigationView
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3181,6 +3190,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3223,7 +3233,9 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id header_avatar
 id header_title
+id header_username
 id hideable
 id home
 id homeAsUp
@@ -3235,7 +3247,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image_view_book_cover
 id immediateStop
 id included
 id indeterminate
@@ -3257,7 +3268,6 @@ id linear
 id listMode
 id list_item
 id m3_side_sheet
-id mapView
 id marquee
 id masked
 id match_constraint
@@ -3283,8 +3293,6 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
-id menuAddTask
-id menuDeleteTask
 id message
 id middle
 id mini
@@ -3319,6 +3327,9 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_rewards
+id nav_tasks
+id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3366,7 +3377,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recycle_view_books
 id reverseSawtooth
 id reward_checkbox
 id reward_coin_cost_text_view
@@ -3488,7 +3498,6 @@ id textTop
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_view_book_title
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3501,6 +3510,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3527,7 +3537,6 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
-id webview
 id west
 id withText
 id with_icon
@@ -3653,7 +3662,6 @@ layout abc_tooltip
 layout activity_add_reward
 layout activity_add_task
 layout activity_main
-layout book_item_list
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3671,11 +3679,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_billing
-layout fragment_map
 layout fragment_reward_management
-layout fragment_shopping_list
 layout fragment_task_management
-layout fragment_web_view
 layout item_billing_record
 layout item_reward
 layout item_task
@@ -3730,6 +3735,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout nav_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -3740,7 +3746,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu menu_main
+menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3897,6 +3903,11 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string nav_header_desc
+string nav_rewards
+string nav_tasks
+string navigation_drawer_close
+string navigation_drawer_open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4527,6 +4538,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_MyApplication
+style Theme_胡清晨
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

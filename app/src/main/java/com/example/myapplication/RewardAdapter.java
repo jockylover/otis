@@ -18,10 +18,11 @@ import java.util.List;
 public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardViewHolder> {
     private List<Reward> rewardsList;
     private SharedViewModel sharedViewModel;
-
-    public RewardAdapter(List<Reward> rewardsList, SharedViewModel sharedViewModel) {
+    private RewardManagementFragment.RewardCompletionListener rewardCompletionListener;
+    public RewardAdapter(List<Reward> rewardsList, SharedViewModel sharedViewModel, RewardManagementFragment.RewardCompletionListener listener) {
         this.rewardsList = rewardsList;
         this.sharedViewModel = sharedViewModel;
+        this.rewardCompletionListener = listener;
     }
 
     @NonNull
@@ -53,13 +54,17 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
                             Toast.makeText(holder.itemView.getContext(), "点数不足，无法兑换此奖励", Toast.LENGTH_SHORT).show();
                         }
                         int adapterPosition = holder.getAdapterPosition();
-                        if (adapterPosition != RecyclerView.NO_POSITION) {
+                        if (adapterPosition != RecyclerView.NO_POSITION && sharedViewModel.getPoints().getValue() >= reward.getCoinCost()) {
                             rewardsList.remove(adapterPosition);
                             notifyItemRemoved(adapterPosition);
+                        }
+                        if (rewardCompletionListener != null) {
+                            rewardCompletionListener.onRewardCompleted(reward);
                         }
                     })
                     .setNegativeButton("取消", null)
                     .show();
+
         });
     }
 

@@ -95,14 +95,18 @@ public class TaskManagementFragment extends Fragment implements Task.TaskComplet
 
     // 初始化示例任务的方法
     private void initializeSampleTasks() {
-        tasksList.add(new Task("完成Android项目", 10));
-        tasksList.add(new Task("阅读技术文章", 5));
-        tasksList.add(new Task("编写代码练习", 8));
+        tasksList.add(new Task("复习马克思主义原理1小时", 10));
+        tasksList.add(new Task("复习计算机网络30分钟", 5));
+        tasksList.add(new Task("做一道编程题", 8));
     }
     // 添加任务Activity启动方法
     public void launchAddTaskActivity() {
         Intent intent = new Intent(getActivity(), AddTaskActivity.class);
         addTaskLauncher.launch(intent);
+    }
+    public void addNewTask(Task newTask) {
+        tasksList.add(newTask);
+        taskAdapter.notifyDataSetChanged();
     }
     public void onAddTaskButtonClicked(View view) {
         launchAddTaskActivity();

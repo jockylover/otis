@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -30,9 +30,13 @@ public class RewardManagementFragment extends Fragment {
     private AchievementPointsManager pointsManager;
     private TextView pointsTextView;
     private SharedViewModel sharedViewModel;
+    private RewardManagementFragment.RewardCompletionListener rewardCompletionListener;
 
     public void setSharedViewModel(SharedViewModel sharedViewModel) {
         this.sharedViewModel = sharedViewModel;
+    }
+    public interface RewardCompletionListener {
+        void onRewardCompleted(Reward reward);
     }
     @Nullable
     @Override
@@ -41,10 +45,10 @@ public class RewardManagementFragment extends Fragment {
 
         // 初始化静态的奖励列表
         rewardsList = new ArrayList<>();
-        rewardsList.add(new Reward("阅读一小时", 5));
+        rewardsList.add(new Reward("刷B站十分钟", 5));
         rewardsList.add(new Reward("看一部电影", 10));
         rewardsList.add(new Reward("外出散步", 4));
-        rewardsList.add(new Reward("玩一小时游戏", 8));
+        rewardsList.add(new Reward("玩一小时游戏", 20));
         addRewardLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -79,13 +83,21 @@ public class RewardManagementFragment extends Fragment {
         sharedViewModel.getPoints().observe(getViewLifecycleOwner(), points -> {
             pointsTextView.setText("成就点数: " + points);
         });
-        rewardAdapter = new RewardAdapter(rewardsList, sharedViewModel);
+        rewardAdapter = new RewardAdapter(rewardsList, sharedViewModel,rewardCompletionListener);
         rewardsRecyclerView.setAdapter(rewardAdapter);
         return view;
     }
     public void launchAddRewardActivity() {
         Intent intent = new Intent(getActivity(), AddRewardActivity.class);
         addRewardLauncher.launch(intent);
+    }
+    public void addNewReward(Reward newReward) {
+        rewardsList.add(newReward);
+        rewardAdapter.notifyDataSetChanged();
+    }
+    public void onRewardCompleted(Reward reward) {
+        // 奖励完成时的处理，比如显示提示信息
+        Toast.makeText(getContext(), "奖励 " + reward.getName() + " 完成！", Toast.LENGTH_SHORT).show();
     }
     private void updatePointsTextView() {
         // 更新成就点数的显示
